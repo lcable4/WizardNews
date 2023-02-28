@@ -5,7 +5,7 @@ const postDetails = (post, timeAgo) => {
       // If the post wasn't found, just throw an error
       throw new Error("Not Found");
     }
-    const html = `<!DOCTYPE html>
+    const htmlText = html `<!DOCTYPE html>
                     <html>
                     <head>
                       <title>Wizard News</title>
@@ -31,9 +31,9 @@ const postDetails = (post, timeAgo) => {
                       </div>
                     </body>
                   </html>`;
-    return html;
+    return htmlText;
   } catch (error) {
-    const html = `
+    const htmlText = html `
             <!DOCTYPE html>
             <html>
             <head>
@@ -47,7 +47,7 @@ const postDetails = (post, timeAgo) => {
               </div>
             </body>
             </html>`;
-    return html;
+    return htmlText;
   }
 };
 
