@@ -1,7 +1,7 @@
 const html = require("html-template-tag");
 
 const postList = (posts, timeAgo) => {
-  const htmlText = html `<!DOCTYPE html>
+  const htmlText = html`<!DOCTYPE html>
     <html>
       <head>
         <title>Wizard News</title>
@@ -10,17 +10,18 @@ const postList = (posts, timeAgo) => {
       <body>
         <div class="news-list">
           <header><img src="/logo.png" />Wizard News</header>
-          ${posts.map((post) => html  `<div class="news-item">
-                <p>
-                  <span class="news-position">${post.id}. ▲</span>
-                  <a href="/posts/${post.id}">${post.title}</a>
-                  <small>(by ${post.name})</small>
-                </p>
-                <small class="news-info">
-                  ${post.upvotes} upvotes | ${timeAgo(post.date.getTime())}
-                </small>
-              </div>`
-            )}
+          ${posts.map(
+            (post) => html`<div class="news-item">
+              <p>
+                <span class="news-position">${post.id}. ▲</span>
+                <a href="/posts/${post.id}">${post.title}</a>
+                <small>(by ${post.name})</small>
+              </p>
+              <small class="news-info">
+                ${post.upvotes} upvotes | ${timeAgo(post.date.getTime())}
+              </small>
+            </div>`
+          )}
         </div>
       </body>
     </html>`;
@@ -28,4 +29,4 @@ const postList = (posts, timeAgo) => {
   return htmlText;
 };
 
-module.exports = { postList: postList };
+module.exports = postList;
