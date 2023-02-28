@@ -1,5 +1,6 @@
 const postDetails = (post, timeAgo) => {
-  try {
+    const html = require("html-template-tag");
+    try {
     if (!post.id) {
       // If the post wasn't found, just throw an error
       throw new Error("Not Found");

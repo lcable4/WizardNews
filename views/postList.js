@@ -1,5 +1,7 @@
+const html = require("html-template-tag");
+
 const postList = (posts, timeAgo) => {
-  const html = `<!DOCTYPE html>
+    const html = `<!DOCTYPE html>
   <html>
   <head>
     <title>Wizard News</title>

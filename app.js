@@ -6,6 +6,7 @@ const timeAgo = require("node-time-ago");
 const { postList } = require("./views/postList");
 const {postDetails } = require('./views/postDetails')
 
+
 app.use(morgan("dev"));
 app.use(express.static("public"));
 
